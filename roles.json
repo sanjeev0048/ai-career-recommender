@@ -1,0 +1,17 @@
+[
+  {
+    "role": "Python Backend Developer",
+    "skills": ["python", "fastapi", "django", "rest api", "sql"],
+    "roadmap": "Master FastAPI + Docker + Cloud deployments"
+  },
+  {
+    "role": "AI Engineer",
+    "skills": ["python", "machine learning", "pytorch", "rag", "llm"],
+    "roadmap": "Learn LLM fine-tuning, embeddings, vector DBs"
+  },
+  {
+    "role": "Full Stack Developer",
+    "skills": ["javascript", "react", "node", "html", "css"],
+    "roadmap": "Projects with authentication + deployment"
+  }
+]

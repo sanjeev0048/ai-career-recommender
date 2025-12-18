@@ -2,16 +2,76 @@
   {
     "role": "Python Backend Developer",
     "skills": ["python", "fastapi", "django", "rest api", "sql"],
-    "roadmap": "Master FastAPI + Docker + Cloud deployments"
+    "roadmap": "Master FastAPI, async programming, Docker, and cloud deployments"
   },
   {
     "role": "AI Engineer",
     "skills": ["python", "machine learning", "pytorch", "rag", "llm"],
-    "roadmap": "Learn LLM fine-tuning, embeddings, vector DBs"
+    "roadmap": "Learn LLM fine-tuning, embeddings, vector databases, and deployment"
   },
   {
     "role": "Full Stack Developer",
     "skills": ["javascript", "react", "node", "html", "css"],
-    "roadmap": "Projects with authentication + deployment"
+    "roadmap": "Build full-stack projects with auth, APIs, and deployment"
+  },
+  {
+    "role": "Data Scientist",
+    "skills": ["python", "pandas", "numpy", "statistics", "machine learning"],
+    "roadmap": "Advance in ML models, data storytelling, and MLOps"
+  },
+  {
+    "role": "Machine Learning Engineer",
+    "skills": ["python", "scikit-learn", "tensorflow", "model deployment"],
+    "roadmap": "Focus on production ML, pipelines, and monitoring"
+  },
+  {
+    "role": "Data Analyst",
+    "skills": ["sql", "excel", "power bi", "tableau", "python"],
+    "roadmap": "Improve dashboards, SQL optimization, and business insights"
+  },
+  {
+    "role": "DevOps Engineer",
+    "skills": ["linux", "docker", "kubernetes", "ci cd", "aws"],
+    "roadmap": "Master cloud infra, automation, and scalability"
+  },
+  {
+    "role": "Cloud Engineer",
+    "skills": ["aws", "azure", "gcp", "terraform", "networking"],
+    "roadmap": "Focus on cloud architecture and certifications"
+  },
+  {
+    "role": "Cybersecurity Engineer",
+    "skills": ["network security", "linux", "penetration testing", "python"],
+    "roadmap": "Learn ethical hacking, SOC tools, and security frameworks"
+  },
+  {
+    "role": "AI Researcher",
+    "skills": ["deep learning", "research papers", "pytorch", "math"],
+    "roadmap": "Focus on advanced DL, papers, and experiments"
+  },
+  {
+    "role": "Mobile App Developer",
+    "skills": ["flutter", "react native", "android", "ios"],
+    "roadmap": "Build cross-platform apps and publish to stores"
+  },
+  {
+    "role": "Frontend Developer",
+    "skills": ["html", "css", "javascript", "react", "ui ux"],
+    "roadmap": "Improve UI/UX, performance, and accessibility"
+  },
+  {
+    "role": "Backend Java Developer",
+    "skills": ["java", "spring boot", "microservices", "sql"],
+    "roadmap": "Learn scalable backend systems and cloud-native apps"
+  },
+  {
+    "role": "Product Engineer",
+    "skills": ["system design", "apis", "databases", "problem solving"],
+    "roadmap": "Strengthen design thinking and product scalability"
+  },
+  {
+    "role": "QA Automation Engineer",
+    "skills": ["selenium", "python", "test automation", "ci cd"],
+    "roadmap": "Advance in automation frameworks and DevOps integration"
   }
 ]

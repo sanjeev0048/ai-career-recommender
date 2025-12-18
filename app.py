@@ -3,41 +3,46 @@ import streamlit as st
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
+# App Title
 st.title("AI Career Role Recommender 🤖💼")
-st.write("Enter your skills to discover best job roles!")
+st.write("Enter your skills and get personalized role suggestions!")
 
-import os
-roles_path = os.path.join(os.path.dirname(__file__), "roles.json")
-with open(roles_path, "r") as f:
+# Load roles data
+with open("roles.json", "r") as f:
     roles_data = json.load(f)
 
+# Prepare role texts and names
+role_texts = [" ".join(role["skills"]) for role in roles_data]
+role_names = [role["role"] for role in roles_data]
 
-# Combine skills for each role into a single string
-roles_list = [" ".join(role["skills"]) for role in roles_data]
-
-# Create TF-IDF vectors for all roles
+# Vectorization
 vectorizer = TfidfVectorizer()
-role_vectors = vectorizer.fit_transform(roles_list)
+role_vectors = vectorizer.fit_transform(role_texts)
 
-skills = st.text_area("Enter your skills (comma separated):")
+# User input
+user_input = st.text_area("Enter your skills (comma separated):", height=100)
 
+# Recommend button
 if st.button("Recommend Roles"):
-    if not skills.strip():
+    if not user_input.strip():
         st.warning("Please enter some skills!")
     else:
-        # Vectorize user skills
-        user_vector = vectorizer.transform([skills.lower()])
-        similarities = cosine_similarity(user_vector, role_vectors)[0]
+        # Transform user input
+        user_vec = vectorizer.transform([user_input.lower()])
+        similarities = cosine_similarity(user_vec, role_vectors)[0]
 
-        # Pair each role with its similarity score
+        # Rank all roles
         ranked = sorted(
-            zip(roles_data, similarities),
+            zip(role_names, similarities, roles_data),
             key=lambda x: x[1],
             reverse=True
         )
 
-        st.subheader("🔥 Top Matching Job Roles")
-        for role, score in ranked[:3]:
-            st.markdown(f"### {role['role']} — **{round(score * 100, 2)}% Match**")
-            st.write(f"📌 Roadmap: {role['roadmap']}")
-            st.write("---")
+        st.subheader("Career Matches 🎯")
+
+        # Show ALL roles
+        for role, score, role_info in ranked:
+            st.markdown(f"### {role}")
+            st.write(f"Match Score: **{round(score * 100, 2)}%**")
+            st.write(f"🛠 Roadmap: {role_info['roadmap']}")
+            st.markdown("---")
